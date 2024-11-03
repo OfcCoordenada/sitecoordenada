@@ -7,29 +7,82 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilo1.css">
     <link rel="shortcut icon" href="logo-preta.jpg" type="image/x-icon">
-    <style>
-        /* Adicionei o padding-top para as seções abaixo do header */
+     <style>
+        /* Estilo para o padding-top nas seções */
         section {
-            padding-top: 80px; /* Ajuste este valor se necessário para corresponder à altura do seu header */
+            padding-top: 80px;
+        }
+
+        /* Estilos para o menu responsivo */
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Esconde o menu e exibe o botão de menu em telas menores */
+        @media (max-width: 1000px) {
+            .menu {
+                display: none;
+            }
+            .menu-toggle {
+                display: block;
+                background: none;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+                color: #fff;
+            }
+        }
+
+        /* Estilo para exibir o menu dropdown ao clicar no botão */
+        .menu.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 80px; /* Logo abaixo do header */
+            background-color: #121212;
+            width: 100%;
+            text-align: center;
+            gap: 10px;
+            padding: 20px 0;
+        }
+
+        /* Estilo dos links dentro do menu dropdown */
+        .menu.active li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        .menu.active li a:hover {
+            background-color: #333;
         }
     </style>
 </head>
 <body>
     <header id="mainHeader">
         <div class="logo">
-            <img src="logo branca.png" alt="Logo da Agência" style="height: 50px;"> <!-- Insira o caminho da sua imagem aqui -->
+            <img src="logo branca.png" alt="Logo da Agência" style="height: 50px;">
         </div>
-        <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div>
             <ul class="menu">
                 <li><a href="#mainHeader" class="scroll-to-top">Home</a></li>
                 <li><a href="serviços.html" target="_blank">Serviços</a></li>
                 <li><a href="portfolio.html">Portfólio</a></li>
                 <li><a href="#diferenciais">Sobre</a></li>
-                <li><a href="#footer">Contato</a></li> <!-- Link direto para o footer -->
+                <li><a href="#footer">Contato</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
-    
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 
 <!-- Seção de Serviços -->
 <section id="servicos">
@@ -64,7 +117,7 @@
     <section id="diferenciais">
         <div class="content-box">
             <div class="left-column">
-                <img src="logo-vermelha.png" alt="Logo da Agência" class="logo">
+                <img src="logo-vermelha.png" alt="Logo da Agência" class="logoc">
             </div>
             <div class="right-column">
                 <h1 class="montserratfont">Sabemos que você procura a melhor agência e <span class="redword"> PARABÉNS VOCÊ ENCONTROU!</span></h1>
@@ -106,7 +159,7 @@
 
         <!-- Seção do Botão de Chamada para Ação -->
         <section id="cta">
-            <div class="logo">
+            <div class="logob">
                 <img src="logo branca.png" alt="Logo" style="max-width: 100px; margin-bottom: 10px;"> <!-- Logo acima do texto -->
             </div>
             <div class="cta-text">
@@ -132,7 +185,7 @@
         <!-- Seção com Foto e Gradiente -->
 <section id="apresentacao">
     <div class="foto-apresentacao">
-        <img src="png-eu..png" alt="Sua Foto">
+        <img class="eu" src="png-eu..png" alt="Sua Foto">
         <div class="gradiente-texto">
             <h2>A diferença está no processo!</h2>
             <p>Sou Gustavo, desenvolvedor e designer, atualmente estudando Ciência da Computação. <br> Desde 2022, atuamos no mercado digital com o objetivo de descomplicar a sua jornada de entrada nesse novo mundo. <br>Reconhecemos que o digital pode parecer complexo, mas estamos aqui para simplificar o processo e oferecer suporte eficaz. Valorizamos <br>boas histórias, pois elas são fundamentais para que a sua se destaque. Conte com a Coordenada e vamos construir o seu sucess juntos."</p>
@@ -176,6 +229,7 @@
         </div>
     </div>
 </footer>
+
 
     <!-- Conteúdo da página -->
     <script src="animação.js"></script>

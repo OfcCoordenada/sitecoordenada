@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência de Marketing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo1.css">
+    <link rel="shortcut icon" href="logo-preta.jpg" type="image/x-icon">
+    <style>
+        /* Adicionei o padding-top para as seções abaixo do header */
+        section {
+            padding-top: 80px; /* Ajuste este valor se necessário para corresponder à altura do seu header */
+        }
+    </style>
+</head>
+<body>
+    <header id="mainHeader">
+        <div class="logo">
+            <img src="logo branca.png" alt="Logo da Agência" style="height: 50px;"> <!-- Insira o caminho da sua imagem aqui -->
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#mainHeader" class="scroll-to-top">Home</a></li>
+                <li><a href="serviços.html" target="_blank">Serviços</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="#diferenciais">Sobre</a></li>
+                <li><a href="#footer">Contato</a></li> <!-- Link direto para o footer -->
+            </ul>
+        </nav>
+    </header>
+    
+
+<!-- Seção de Serviços -->
+<section id="servicos">
+    <div class="service-container">
+        <div class="service active">
+            <img src="CRIAÇÃO-DE-SITE.jpg" alt="Criação de site profissional">
+            <h3>Criação de site profissional</h3>
+        </div>
+        <div class="service">
+            <img src="editor-de-video.jpg" alt="Edição de vídeo">
+            <h3>Edição de vídeo</h3>
+        </div>
+        <div class="service">
+            <img src="gestao-de-trafego.jpg" alt="Gestão de Tráfego">
+            <h3>Gestão de Tráfego</h3>
+        </div>
+        <div class="service">
+            <img src="identidade-visual.jpg" alt="Crie sua Identidade Visual">
+            <h3>Crie sua Identidade Visual</h3>
+        </div>
+        <div class="service">
+            <img src="videmaker.jpg" alt="Videomaker">
+            <h3>Videomaker</h3>
+        </div>
+        <button id="prevService" class="nav-button left">&#10094;</button>
+        <button id="nextService" class="nav-button right">&#10095;</button>
+    </div>
+</section>
+
+    
+    <!-- Seção 3 -->
+    <section id="diferenciais">
+        <div class="content-box">
+            <div class="left-column">
+                <img src="logo-vermelha.png" alt="Logo da Agência" class="logo">
+            </div>
+            <div class="right-column">
+                <h1 class="montserratfont">Sabemos que você procura a melhor agência e <span class="redword"> PARABÉNS VOCÊ ENCONTROU!</span></h1>
+                <p class="grey">A coordenada busca o equilibrio entre todas as partes do todo, marketing digital, tráfego pago, design, tecnologia e mídias sociais. A revolução digital já chegou e você não pode ficar de fora disso por mais tempo, tempo é o recurso mais importante e o conhecimento a ferramenta essencial, juntamos ambos para ter o melhor das conexões com o mundo dos negócios.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let lastScrollTop = 0; // Armazena a posição do último scroll
+        const header = document.getElementById('mainHeader'); // Seleciona o header
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Posição atual do scroll
+
+            if (scrollTop > lastScrollTop) {
+                // Rolando para baixo
+                header.style.top = "-80px"; // Esconde o header (ajuste a altura conforme necessário)
+            } else {
+                // Rolando para cima
+                header.style.top = "0"; // Mostra o header
+            }
+            lastScrollTop = scrollTop; // Atualiza a posição do último scroll
+        });
+    </script>
+        <!-- Seção 4 -->
+        <section id="diferenciais">
+            <div class="content-container">
+                <div class="column">
+                    <h2 >Tudo ao seu alcance</h2>
+                    <p class="grey">Não conte com somente um serviço mas com uma equipe que <br>irá definitivamente cuidar de todo o seu marketing desde as artes até gestão comercial</p>
+                </div>
+                <div class="column">
+                    <h2 >Organizaçao é fundamental para o sucesso</h2>
+                    <p class="grey">Sabemos que sua estrutura funciona mas atualizar para oque <br> está mais que validado é mais que necessário na sua produção</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção do Botão de Chamada para Ação -->
+        <section id="cta">
+            <div class="logo">
+                <img src="logo branca.png" alt="Logo" style="max-width: 100px; margin-bottom: 10px;"> <!-- Logo acima do texto -->
+            </div>
+            <div class="cta-text">
+                <h2>O primeiro passo para o crescimento <br>está a um clique.</h2>
+            </div>
+            <div class="cta-button">
+                <a href="serviços.html"  class="button" target="_blank">Saiba mais</a>
+            </div>
+        </section>
+
+                <!-- Seção 6 -->
+        <section id="empresas" style="background-color: #ffffff; padding: 40px 0;">
+            <h1 class="white">Clientes que já contrataram a <br>
+            Coordenada</h1>
+            <div class="empresas-container">
+                <a href="https://empresa1.com" target="_blank"><img src="casa-da-pizza-icon.png" alt="Empresa 1"></a>
+                <a href="https://empresa2.com" target="_blank"><img src="logo-pl.png" alt="Empresa 2"></a>
+                <a href="https://empresa3.com" target="_blank"><img src="th-camarao.png" alt="Empresa 3"></a>
+                <a href="https://empresa4.com" target="_blank"><img src="brown-art-studio.png" alt="Empresa 4"></a>
+            </div>
+        </section>
+
+        <!-- Seção com Foto e Gradiente -->
+<section id="apresentacao">
+    <div class="foto-apresentacao">
+        <img src="png-eu..png" alt="Sua Foto">
+        <div class="gradiente-texto">
+            <h2>A diferença está no processo!</h2>
+            <p>Sou Gustavo, desenvolvedor e designer, atualmente estudando Ciência da Computação. <br> Desde 2022, atuamos no mercado digital com o objetivo de descomplicar a sua jornada de entrada nesse novo mundo. <br>Reconhecemos que o digital pode parecer complexo, mas estamos aqui para simplificar o processo e oferecer suporte eficaz. Valorizamos <br>boas histórias, pois elas são fundamentais para que a sua se destaque. Conte com a Coordenada e vamos construir o seu sucess juntos."</p>
+        </div>
+    </div>
+</section>
+
+        <!-- Ultima Seção Contrate a Coordenada -->
+<section id="contrate" style="background-image: url('negocios.png'); background-size: cover; background-position: center; padding: 80px 0; color: white;">
+    <div class="content-overlay">
+        <h2>Deixe que a Coordenada te guie no digital</h2> <br><br><br>
+        <p>Seja um revolucionário no digital</p>
+        <a href="https://api.whatsapp.com/send?phone=5592992894900&text=Quero%20contratar%20a%20Coordenada!%0AE-mail%3A%20%0ATelefone%3A%20%0AServi%C3%A7o%20Escolhido%3A%20%0AMensagem%3A%20%22%22" class="botao-cta">Contratar agora</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+    <div class="footer-container">
+        <!-- Coluna 1: Logo e Redes Sociais -->
+        <div class="footer-coluna">
+            <img src="logo-vermelha.png" alt="Logo" class="footer-logo">
+            <div class="redes-sociais">
+                <a href="https://www.facebook.com/seuperfil" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/seuperfil" target="_blank">Instagram</a>
+                <a href="https://www.linkedin.com/in/seuperfil" target="_blank">Youtube</a>
+            </div>
+        </div>
+
+        <!-- Coluna 2: Endereço e Contato -->
+        <div class="footer-coluna">
+            <p><strong>Endereço:</strong><br> Rua Guianesia ,131 <br> Manaus - Amazonas</p>
+            <p><strong>Email:</strong><br> ofccoodenada@gmail.com</p>
+            <p><strong>fone:</strong><br> (92) 99289 4900</p>
+        </div>
+
+        <!-- Coluna 3: Desenvolvedor -->
+        <div class="footer-coluna">
+            <p> &#169 Todos os direitos reservados</p>
+            <p>Desenvolvido por Coordenada Tecnologia</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Conteúdo da página -->
+    <script src="animação.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Header */
+#mainHeader {
+    display: flex;
+    flex-direction: column; /* Alinhado em coluna */
+    align-items: center; /* Centraliza os itens */
+    padding: 20px 0; /* Espaçamento acima e abaixo */
+    background-color: #1f1f1f;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 70px; /* Altura da logo */
+    width: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 10px; /* Espaço abaixo da logo */
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    list-style: none; /* Remove os pontos */
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #005b99; /* Azul mais escuro */
+}
+
+/* Texto das colunas */
+.texto-section {
+    display: flex;
+    justify-content: center; /* Centraliza as colunas */
+    margin: 100px 0 20px 0; /* Margem superior para evitar sobreposição com o header */
+}
+
+.texto-container {
+    display: flex;
+    max-width: 800px; /* Largura máxima das colunas */
+    width: 100%; /* Largura total */
+    justify-content: space-between; /* Espaço entre as colunas */
+}
+
+.coluna {
+    flex: 1; /* Cada coluna ocupa espaço igual */
+    padding: 10px; /* Espaçamento interno das colunas */
+}
+
+.texto-principal {
+    color: #ff0000; /* Cor vermelha para o título */
+    font-size: 20px; /* Tamanho da fonte do título */
+}
+
+.coluna p {
+    color: #ffffff; /* Cor branca para o texto */
+    font-size: 16px; /* Tamanho da fonte do parágrafo */
+}
+
+/* Caixa de cadastros */
+.cadastro-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura total da viewport */
+}
+
+.form-container {
+    background: linear-gradient(145deg, #2c2c2c, #1e1e1e); /* Gradiente da caixa */
+    border: 2px solid #00f; /* Borda azul neon */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 30px rgba(0, 0, 255, 0.5); /* Sombra para efeito neon */
+    padding: 20px;
+    width: 300px; /* Largura da caixa */
+    text-align: center;
+}
+
+/* Estilo para inputs e textarea (exceto select) */
+input, textarea {
+    width: calc(100% - 20px); /* Largura total do campo menos padding */
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas para os campos */
+    background: #555; /* Fundo dos campos */
+    color: #fff; /* Cor do texto dos campos */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilo específico para o select */
+select {
+    width: calc(100% - 20px); /* Largura total do campo menos padding */
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas para o campo */
+    background: #555; /* Fundo do campo */
+    color: #fff; /* Cor do texto do campo */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilo para foco nos campos */
+input:focus, select:focus, textarea:focus {
+    outline: none; /* Remove o contorno ao focar */
+    box-shadow: 0 0 5px #00f; /* Efeito de brilho ao focar */
+}
+
+/* Estilo para o botão */
+button {
+    background-color: #ff0000; /* Botão vermelho */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove borda do botão */
+    border-radius: 5px; /* Bordas arredondadas do botão */
+    padding: 10px 15px;
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: all 0.3s ease; /* Transição suave para o efeito */
+}
+
+button:hover {
+    background-color: transparent; /* Remove o fundo ao passar o mouse */
+    border: 2px solid #ff0000; /* Adiciona uma borda vermelha */
+    color: #ff0000; /* Muda a cor do texto para vermelho */
+}
+
+.video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0; /* Espaçamento para separar o vídeo das demais seções */
+}

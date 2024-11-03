@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência de Marketing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estiloserviço.css">
+    <link rel="shortcut icon" href="logo-preta.jpg" type="image/x-icon">
+</head>
+<body>
+    <header id="mainHeader">
+        <div class="logo">
+            <img src="logo branca.png" alt="Logo da Agência" style="height: 50px;">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="serviços.html">Serviços</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="texto-section">
+        <div class="texto-container">
+            <div class="coluna">
+                <h3 class="texto-principal"><br><br><br><br><br><br> <span> A HORA DE SE POSICIONAR COM AUTORIDADE NO DIGITAL</span></h3>
+                <p>A Coordenada vai te guiar nesse mundo e fazer você ser destaque em todos os seus segmentos.</p>
+            </div>
+            <div class="coluna">
+                <h3 class="texto-principal"><br><br><br><br><br><br><span>DOMINE SUA REGIÃO</span></h3>
+                <p><br>Mais que uma agência somos uma comunidade que ajuda vários negócios com mentorias gratuitas além de espaço para network com maior crescimento da região norte</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Vídeo -->
+    <section class="video-section">
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fUEUUZmLwn0?autoplay=1&mute=1&loop=1&playlist=fUEUUZmLwn0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="cadastro-section">
+        <div class="form-container">
+            <form id="whatsappForm">
+                <h2>Insira seus dados</h2>
+                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="tel" id="telefone" placeholder="Telefone ou WhatsApp" required>
+                
+                <label for="servico">Serviço desejado:</label>
+                <select id="servico" required>
+                    <option value="" disabled selected>Selecione um serviço</option>
+                    <option value="Tráfego Pago">Tráfego Pago</option>
+                    <option value="Design">Design</option>
+                    <option value="Vídeo Editor">Vídeo Editor</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Criação de site ou dev">Criação de site ou dev</option>
+                    <option value="Todos os Serviços">Todos os Serviços</option>
+                </select>
+    
+                <textarea id="mensagem" placeholder="Descreva brevemente o que espera de uma agência" rows="4" required></textarea>
+                <button type="button" onclick="enviarParaWhatsApp()">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+ function enviarParaWhatsApp() {
+    const email = document.getElementById('email').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const servico = document.getElementById('servico').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
+
+    const texto = `Quero contratar a Coordenada!\n` +
+                  `E-mail: ${email}\n` +
+                  `Telefone: ${telefone}\n` +
+                  `Serviço Escolhido: ${servico}\n` +
+                  `Mensagem: "${mensagem}"`;
+
+    const numeroWhatsApp = "5592992894900";
+
+    const link = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(texto)}`;
+
+    window.open(link, '_blank');
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Header */
+#mainHeader {
+    display: flex;
+    flex-direction: column; /* Alinhado em coluna */
+    align-items: center; /* Centraliza os itens */
+    padding: 20px 0; /* Espaçamento acima e abaixo */
+    background-color: #1f1f1f;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px; /* Altura da logo */
+    width: auto; /* Mantém a proporção da imagem */
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    list-style: none; /* Remove os pontos */
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #005b99; /* Azul mais escuro */
+}

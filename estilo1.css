@@ -10,6 +10,22 @@ html {
     scroll-behavior: smooth; /* Efeito de scroll suave */
 }
 
+/* Ajustes para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .content-container {
+        flex-direction: column; /* Colunas empilhadas */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .logo {
+        width: 200px; /* Ajuste de tamanho da logo */
+    }
+
+    .column h2 {
+        font-size: 20px; /* Tamanho do título reduzido */
+    }
+}
+
 /* Header */
 #mainHeader {
     position: fixed;
@@ -61,7 +77,7 @@ section {
         gap: 15px;
     }
     .logo img {
-        height: 40px;
+        height: 40px; /* Ajuste na altura da logo para mobile */
     }
 }
 
@@ -133,7 +149,6 @@ section {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-
 /* Seção 3 */
 #diferenciais {
     background-color: #ffffff;
@@ -143,11 +158,13 @@ section {
 }
 
 .content-box {
-    width: 70%;
+    width: 90%; /* Ajuste a largura para dispositivos móveis */
+    max-width: 1200px; /* Limite para telas grandes */
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Permite que as colunas quebrem em dispositivos menores */
 }
 
 .left-column {
@@ -178,8 +195,8 @@ section {
 /* Seção 4 */
 #diferenciais {
     background-color: white; /* Fundo branco */
-    color: red;
-    font-family: sans-serif
+    color: red; /* Texto em vermelho */
+    font-family: sans-serif; /* Fonte sans-serif */
     padding: 40px 20px; /* Espaçamento interno */
 }
 
@@ -197,7 +214,7 @@ section {
 }
 
 .column h2 {
-    color: red;
+    color: red; /* Cor do título */
     font-size: 24px; /* Tamanho do título */
     margin-bottom: 10px; /* Espaçamento abaixo do título */
 }
@@ -206,13 +223,13 @@ section {
     font-size: 16px; /* Tamanho do parágrafo */
     line-height: 1.5; /* Altura da linha */
 }
-.grey{
+
+.grey {
     color: #5e5e5e;
     font-family: sans-serif;
 }
 
-
-/* SESSAO 5 - Estilo para a Seção do Botão de Chamada para Ação */
+/* Seção 5 - Estilo para a Seção do Botão de Chamada para Ação */
 #cta {
     text-align: center;
     margin: 40px 0;
@@ -237,39 +254,6 @@ section {
     transition: transform 0.3s, box-shadow 0.3s; /* Transições para o efeito pulsante */
 }
 
-/* Estilo para a Seção do Botão de Chamada para Ação */
-#cta {
-    text-align: center;
-    margin: 40px 0;
-}
-
-/* Estilo da logo */
-.logo img {
-    text-align: center;
-    font-size: 10px;
-    max-width: 150px; /* Define a largura máxima da logo */
-    margin-bottom: 10px; /* Espaçamento abaixo da logo */
-}
-
-/* Estilo do texto acima do botão */
-.cta-text h2 {
-    font-size: 40px;
-    color: #ffffff; /* Cor do texto */
-    margin-bottom: 20px;
-}
-
-/* Estilo do botão */
-.cta-button .button {
-    display: inline-block;
-    background-color: red; /* Cor de fundo do botão */
-    color: white; /* Cor do texto do botão */
-    padding: 15px 30px; /* Espaçamento interno do botão */
-    border-radius: 25px; /* Bordas arredondadas */
-    text-decoration: none; /* Remove o sublinhado */
-    font-size: 18px; /* Tamanho da fonte */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transições para o efeito pulsante */
-}
-
 /* Efeito pulsante e brilho */
 .cta-button .button:hover {
     animation: pulse 1s infinite; /* Animação pulsante */
@@ -287,10 +271,9 @@ section {
     100% {
         transform: scale(1); /* Retorna ao tamanho original */
     }
-
-
-    /* Seçao 6  empresas já contratadas*/
 }
+
+/* Seção 6 - Empresas já contratadas */
 #empresas {
     text-align: center;
     font-size: 20px;
@@ -311,12 +294,12 @@ section {
 .empresas-container a img:active {
     transform: scale(1.2);
 }
-.white{
+
+.white {
     color: black;
 }
 
-/* Ultima sessao */
-
+/* Última seção */
 #contrate {
     display: flex;
     align-items: center;
@@ -345,8 +328,8 @@ section {
 #contrate .botao-cta {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #FF0000;
-    color: white;
+    background-color: #FF0000; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
     font-size: 18px;
     border-radius: 30px;
     text-decoration: none;
@@ -362,9 +345,8 @@ section {
 
 #contrate .botao-cta:active {
     transform: scale(1.1);
-
-
 }
+
 /* Estilos para a Seção com Foto e Gradiente */
 #apresentacao {
     position: relative;

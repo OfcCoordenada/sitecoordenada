@@ -10,22 +10,6 @@ html {
     scroll-behavior: smooth; /* Efeito de scroll suave */
 }
 
-/* Ajustes para tablets */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .content-container {
-        flex-direction: column; /* Colunas empilhadas */
-        align-items: center; /* Centraliza os itens */
-    }
-
-    .logo {
-        width: 200px; /* Ajuste de tamanho da logo */
-    }
-
-    .column h2 {
-        font-size: 20px; /* Tamanho do título reduzido */
-    }
-}
-
 /* Header */
 #mainHeader {
     position: fixed;
@@ -71,21 +55,7 @@ section {
     padding-top: 80px;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .menu {
-        gap: 15px;
-    }
-    .logo img {
-        height: 40px; /* Ajuste na altura da logo para mobile */
-    }
-}
 
-@media (max-width: 480px) {
-    #mainHeader {
-        padding: 10px;
-        align-items: flex-start;
-    }
     .menu {
         flex-direction: column;
         align-items: center;
@@ -94,7 +64,7 @@ section {
     .menu a {
         padding: 10px;
     }
-}
+
 
 /* Seção de Serviços */
 #servicos {
@@ -147,6 +117,40 @@ section {
 
 .nav-button:hover {
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo para o menu responsivo */
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+/* Esconde o menu em telas menores e exibe o botão do menu */
+@media screen (max-width: 1000px) {
+    .menu {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #fff;
+    }
+}
+
+/* Estilos para o menu dropdown em telas menores */
+.menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px; /* Alinhar logo abaixo do header */
+    background-color: #121212;
+    width: 100%;
+    text-align: center;
+    gap: 10px;
+    padding: 20px 0;
 }
 
 /* Seção 3 */
@@ -275,29 +279,44 @@ section {
 
 /* Seção 6 - Empresas já contratadas */
 #empresas {
-    text-align: center;
+    text-align: center; /* Centraliza o texto */
     font-size: 20px;
 }
 
+.empresas-container {
+    display: flex; /* Define o contêiner como flexível */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    flex-wrap: nowrap; /* Impede que os itens quebrem para a linha seguinte */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+}
+
+.empresas-container a {
+    display: flex; /* Faz os links também se comportarem como flex containers */
+    align-items: center; /* Centraliza as imagens verticalmente */
+}
+
 .empresas-container a img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    transition: transform 0.2s ease-in-out;
-    margin: 0 15px;
+    width: 150px; /* Ajusta o tamanho da imagem */
+    height: 150px; /* Ajusta o tamanho da imagem */
+    border-radius: 50%; /* Bordas arredondadas */
+    transition: transform 0.2s ease-in-out; /* Transição suave */
+    margin: 0 15px; /* Espaço entre as imagens */
 }
 
 .empresas-container a img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
 }
 
 .empresas-container a img:active {
-    transform: scale(1.2);
+    transform: scale(1.2); /* Aumenta a imagem quando clicada */
 }
 
 .white {
-    color: black;
+    color: black; /* Define a cor do texto */
 }
+
+
+
 
 /* Última seção */
 #contrate {
@@ -307,7 +326,6 @@ section {
     text-align: center;
     position: relative;
 }
-
 #contrate .content-overlay {
     padding: 40px 20px;
     border-radius: 10px;
@@ -351,42 +369,44 @@ section {
 #apresentacao {
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
     height: 500px;
     background-color: #ffffff;
     overflow: hidden;
+    text-align: center; /* Adiciona centralização do texto */
 }
 
 .foto-apresentacao {
     display: flex;
     align-items: center;
+    justify-content: center; /* Centraliza a imagem */
     width: 100%;
 }
 
 .foto-apresentacao img {
-    width: 50%;
+    width: 50%; /* Você pode ajustar esse valor conforme necessário */
     height: auto;
     object-fit: cover;
 }
 
 .gradiente-texto {
-    width: 50%;
-    padding: 20px;
-    color: rgb(0, 0, 0);
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
-    text-align: left;
+    display: flex; /* Adiciona um contêiner flexível para o texto */
+    flex-direction: column; /* Alinha o texto em coluna */
+    align-items: center; /* Centraliza o texto horizontalmente */
 }
 
 .gradiente-texto h2 {
     font-size: 2.2em;
     margin-bottom: 10px;
     color: #000000;
+    max-width: 50%; /* Ajuste para limitar a largura do texto */
 }
 
 .gradiente-texto p {
     font-size: 1.1em;
     line-height: 1.6;
+    color: black;
 }
 
 /* Estilos para o Footer */
@@ -436,4 +456,46 @@ section {
     color: #aaa;
 }
 
+/* Cabecalho menus */
+@media screen and (max-width: 1000px){
+.foto-apresentacao, img, .gradiente-texto{
+    flex-direction: column-reverse;
+    width: 100%;
 
+}
+.menu{
+    display: none;
+}
+/* sessao 6 foto gradient */
+.gradiente-texto, .eu{
+    flex-direction: column;
+    max-width: max-content;
+    font-size: 10px;
+    text-align: center;
+}
+/* texto empresas que ja contrataram */
+
+.empresas-container {
+    display: flex; /* Altera para flexbox */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não houver espaço */
+    max-width: 100%; /* Ou um valor adequado para o seu layout */
+}
+
+.empresas-item {
+   width: 15px; /* Tamanho máximo para cada item */
+    max-height: 15px; /* Tamanho máximo para cada item */
+    margin: 5px; /* Espaçamento entre os itens, ajuste conforme necessário */
+}
+.centralizar{
+    text-align: center;
+}
+.logo {
+    width: 100px;
+    height: 30;
+}
+
+.logoc {
+    text-align: center;
+    width: 200px;
+    height: 70px;
+}

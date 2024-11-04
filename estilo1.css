@@ -55,7 +55,21 @@ section {
     padding-top: 80px;
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        gap: 15px;
+    }
+    .logo img {
+        height: 40px;
+    }
+}
 
+@media (max-width: 480px) {
+    #mainHeader {
+        padding: 10px;
+        align-items: flex-start;
+    }
     .menu {
         flex-direction: column;
         align-items: center;
@@ -64,7 +78,7 @@ section {
     .menu a {
         padding: 10px;
     }
-
+}
 
 /* Seção de Serviços */
 #servicos {
@@ -119,39 +133,6 @@ section {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Estilo para o menu responsivo */
-.menu {
-    display: flex;
-    gap: 20px;
-}
-
-/* Esconde o menu em telas menores e exibe o botão do menu */
-@media screen (max-width: 1000px) {
-    .menu {
-        display: none;
-    }
-    .menu-toggle {
-        display: block;
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-        color: #fff;
-    }
-}
-
-/* Estilos para o menu dropdown em telas menores */
-.menu.active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 80px; /* Alinhar logo abaixo do header */
-    background-color: #121212;
-    width: 100%;
-    text-align: center;
-    gap: 10px;
-    padding: 20px 0;
-}
 
 /* Seção 3 */
 #diferenciais {
@@ -162,13 +143,11 @@ section {
 }
 
 .content-box {
-    width: 90%; /* Ajuste a largura para dispositivos móveis */
-    max-width: 1200px; /* Limite para telas grandes */
+    width: 70%;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Permite que as colunas quebrem em dispositivos menores */
 }
 
 .left-column {
@@ -199,8 +178,8 @@ section {
 /* Seção 4 */
 #diferenciais {
     background-color: white; /* Fundo branco */
-    color: red; /* Texto em vermelho */
-    font-family: sans-serif; /* Fonte sans-serif */
+    color: red;
+    font-family: sans-serif
     padding: 40px 20px; /* Espaçamento interno */
 }
 
@@ -218,7 +197,7 @@ section {
 }
 
 .column h2 {
-    color: red; /* Cor do título */
+    color: red;
     font-size: 24px; /* Tamanho do título */
     margin-bottom: 10px; /* Espaçamento abaixo do título */
 }
@@ -227,13 +206,13 @@ section {
     font-size: 16px; /* Tamanho do parágrafo */
     line-height: 1.5; /* Altura da linha */
 }
-
-.grey {
+.grey{
     color: #5e5e5e;
     font-family: sans-serif;
 }
 
-/* Seção 5 - Estilo para a Seção do Botão de Chamada para Ação */
+
+/* SESSAO 5 - Estilo para a Seção do Botão de Chamada para Ação */
 #cta {
     text-align: center;
     margin: 40px 0;
@@ -258,6 +237,39 @@ section {
     transition: transform 0.3s, box-shadow 0.3s; /* Transições para o efeito pulsante */
 }
 
+/* Estilo para a Seção do Botão de Chamada para Ação */
+#cta {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Estilo da logo */
+.logo img {
+    text-align: center;
+    font-size: 10px;
+    max-width: 150px; /* Define a largura máxima da logo */
+    margin-bottom: 10px; /* Espaçamento abaixo da logo */
+}
+
+/* Estilo do texto acima do botão */
+.cta-text h2 {
+    font-size: 40px;
+    color: #ffffff; /* Cor do texto */
+    margin-bottom: 20px;
+}
+
+/* Estilo do botão */
+.cta-button .button {
+    display: inline-block;
+    background-color: red; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 15px 30px; /* Espaçamento interno do botão */
+    border-radius: 25px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 18px; /* Tamanho da fonte */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transições para o efeito pulsante */
+}
+
 /* Efeito pulsante e brilho */
 .cta-button .button:hover {
     animation: pulse 1s infinite; /* Animação pulsante */
@@ -275,50 +287,36 @@ section {
     100% {
         transform: scale(1); /* Retorna ao tamanho original */
     }
-}
 
-/* Seção 6 - Empresas já contratadas */
+
+    /* Seçao 6  empresas já contratadas*/
+}
 #empresas {
-    text-align: center; /* Centraliza o texto */
+    text-align: center;
     font-size: 20px;
 }
 
-.empresas-container {
-    display: flex; /* Define o contêiner como flexível */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    flex-wrap: nowrap; /* Impede que os itens quebrem para a linha seguinte */
-    margin: 0 auto; /* Centraliza o contêiner na página */
-}
-
-.empresas-container a {
-    display: flex; /* Faz os links também se comportarem como flex containers */
-    align-items: center; /* Centraliza as imagens verticalmente */
-}
-
 .empresas-container a img {
-    width: 150px; /* Ajusta o tamanho da imagem */
-    height: 150px; /* Ajusta o tamanho da imagem */
-    border-radius: 50%; /* Bordas arredondadas */
-    transition: transform 0.2s ease-in-out; /* Transição suave */
-    margin: 0 15px; /* Espaço entre as imagens */
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    transition: transform 0.2s ease-in-out;
+    margin: 0 15px;
 }
 
 .empresas-container a img:hover {
-    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+    transform: scale(1.1);
 }
 
 .empresas-container a img:active {
-    transform: scale(1.2); /* Aumenta a imagem quando clicada */
+    transform: scale(1.2);
+}
+.white{
+    color: black;
 }
 
-.white {
-    color: black; /* Define a cor do texto */
-}
+/* Ultima sessao */
 
-
-
-
-/* Última seção */
 #contrate {
     display: flex;
     align-items: center;
@@ -326,6 +324,7 @@ section {
     text-align: center;
     position: relative;
 }
+
 #contrate .content-overlay {
     padding: 40px 20px;
     border-radius: 10px;
@@ -346,8 +345,8 @@ section {
 #contrate .botao-cta {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #FF0000; /* Cor do botão */
-    color: white; /* Cor do texto do botão */
+    background-color: #FF0000;
+    color: white;
     font-size: 18px;
     border-radius: 30px;
     text-decoration: none;
@@ -363,50 +362,46 @@ section {
 
 #contrate .botao-cta:active {
     transform: scale(1.1);
-}
 
+
+}
 /* Estilos para a Seção com Foto e Gradiente */
 #apresentacao {
     position: relative;
     display: flex;
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;
+    justify-content: center;
     height: 500px;
     background-color: #ffffff;
     overflow: hidden;
-    text-align: center; /* Adiciona centralização do texto */
 }
 
 .foto-apresentacao {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centraliza a imagem */
     width: 100%;
 }
 
 .foto-apresentacao img {
-    width: 50%; /* Você pode ajustar esse valor conforme necessário */
+    width: 50%;
     height: auto;
     object-fit: cover;
 }
 
 .gradiente-texto {
-    display: flex; /* Adiciona um contêiner flexível para o texto */
-    flex-direction: column; /* Alinha o texto em coluna */
-    align-items: center; /* Centraliza o texto horizontalmente */
-}
+    width: 50%;
+    padding: 20px;
+    color: rgb(0, 0, 0);
 
-.gradiente-texto h2 {
-    font-size: 2.2em;
-    margin-bottom: 10px;
-    color: #000000;
-    max-width: 50%; /* Ajuste para limitar a largura do texto */
+    text-align: left;
+}
+.blackw{
+    color: black;
 }
 
 .gradiente-texto p {
     font-size: 1.1em;
     line-height: 1.6;
-    color: black;
 }
 
 /* Estilos para o Footer */
@@ -456,46 +451,39 @@ section {
     color: #aaa;
 }
 
-/* Cabecalho menus */
+
 @media screen and (max-width: 1000px){
-.foto-apresentacao, img, .gradiente-texto{
-    flex-direction: column-reverse;
-    width: 100%;
+    .content-box{
 
-}
-.menu{
-    display: none;
-}
-/* sessao 6 foto gradient */
-.gradiente-texto, .eu{
-    flex-direction: column;
-    max-width: max-content;
-    font-size: 10px;
-    text-align: center;
-}
-/* texto empresas que ja contrataram */
+        flex-direction: column;
+    }
+    .logo1{
+        text-align: center;
+    }
 
-.empresas-container {
-    display: flex; /* Altera para flexbox */
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não houver espaço */
-    max-width: 100%; /* Ou um valor adequado para o seu layout */
-}
+    .menu{
+        display: none;
+    }
+   }
+  
+    .logovermelha{
+    width: 300px;
+    height: 90px;
 
-.empresas-item {
-   width: 15px; /* Tamanho máximo para cada item */
-    max-height: 15px; /* Tamanho máximo para cada item */
-    margin: 5px; /* Espaçamento entre os itens, ajuste conforme necessário */
-}
-.centralizar{
-    text-align: center;
-}
-.logo {
-    width: 100px;
-    height: 30;
-}
+    
+    #empresas, .empresas-container{
+        text-align: center;
+        width: 100%;
+    }
+    #apresentaçãp{
+        
+    }
+    .blackw, .foto{
+        width: 100%;
+    }
+    .black
 
-.logoc {
-    text-align: center;
-    width: 200px;
-    height: 70px;
-}
+    }
+
+
+

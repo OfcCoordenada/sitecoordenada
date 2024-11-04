@@ -294,14 +294,26 @@ section {
 #empresas {
     text-align: center;
     font-size: 20px;
+    padding: 40px 0;
+}
+
+.empresas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.empresas-container a {
+    flex: 1 1 100px; /* Permite que os itens se ajustem conforme o espaço */
+    max-width: 120px; /* Define o tamanho máximo em dispositivos móveis */
 }
 
 .empresas-container a img {
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    height: auto;
     border-radius: 50%;
     transition: transform 0.2s ease-in-out;
-    margin: 0 15px;
 }
 
 .empresas-container a img:hover {
@@ -311,9 +323,18 @@ section {
 .empresas-container a img:active {
     transform: scale(1.2);
 }
-.white{
+
+.white {
     color: black;
 }
+
+/* Ajustes específicos para telas menores */
+@media screen and(max-width: 600px) {
+    .empresas-container a {
+        max-width: 80px; /* Ajusta o tamanho das imagens em telas pequenas */
+    }
+}
+
 
 /* Ultima sessao */
 
@@ -366,42 +387,62 @@ section {
 
 }
 /* Estilos para a Seção com Foto e Gradiente */
+/* Estilos para a Seção com Foto e Gradiente */
 #apresentacao {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 500px;
+    height: auto; /* Ajusta a altura para auto para se adaptar ao conteúdo */
     background-color: #ffffff;
     overflow: hidden;
+    flex-direction: column; /* Permite que os itens fiquem empilhados verticalmente */
 }
 
 .foto-apresentacao {
     display: flex;
+    flex-direction: column; /* Alinha a imagem e o texto verticalmente */
     align-items: center;
     width: 100%;
 }
 
 .foto-apresentacao img {
-    width: 50%;
+    width: 80%; /* Ajusta a largura da imagem em dispositivos móveis */
+    max-width: 300px; /* Limita a largura máxima da imagem */
     height: auto;
     object-fit: cover;
 }
 
 .gradiente-texto {
-    width: 50%;
+    width: 80%; /* Ajusta a largura do texto em dispositivos móveis */
     padding: 20px;
     color: rgb(0, 0, 0);
-
-    text-align: left;
+    text-align: center; /* Centraliza o texto em dispositivos móveis */
 }
-.blackw{
+
+.blackw {
     color: black;
 }
 
 .gradiente-texto p {
     font-size: 1.1em;
     line-height: 1.6;
+}
+
+/* Media Query para dispositivos menores */
+@media (max-width: 600px) {
+    #apresentacao {
+        flex-direction: column; /* Assegura que o layout seja vertical em telas pequenas */
+        text-align: center; /* Centraliza o texto para telas menores */
+    }
+
+    .foto-apresentacao img {
+        width: 100%; /* Imagem ocupa toda a largura disponível em mobile */
+    }
+
+    .gradiente-texto {
+        width: 100%; /* Texto ocupa toda a largura disponível em mobile */
+    }
 }
 
 /* Estilos para o Footer */
@@ -469,19 +510,23 @@ section {
     .logovermelha{
     width: 300px;
     height: 90px;
-
-    
-    #empresas, .empresas-container{
-        text-align: center;
-        width: 100%;
+} 
+   
+    #apresentacao{
+        flex-direction: column;
     }
-    #apresentaçãp{
         
     }
-    .blackw, .foto{
-        width: 100%;
+    .blackw{
+        width: auto;
     }
-    .black
+    .blackp{
+        width: auto;
+    }
+    }
+    .fotoeu{
+        width:auto
+    }
 
     }
 

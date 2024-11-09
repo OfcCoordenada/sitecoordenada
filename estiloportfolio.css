@@ -40,3 +40,20 @@ body {
 .menu a:hover {
     color: #005b99; /* Azul mais escuro */
 }
+
+
+/* Ajustes para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .content-container {
+        flex-direction: column; /* Colunas empilhadas */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .logo {
+        width: 200px; /* Ajuste de tamanho da logo */
+    }
+
+    .column h2 {
+        font-size: 20px; /* Tamanho do título reduzido */
+    }
+}

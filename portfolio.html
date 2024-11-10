@@ -7,6 +7,81 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estiloserviço.css">
     <link rel="shortcut icon" href="logo-preta.jpg" type="image/x-icon">
+    <style>
+        body{
+            text-align: center;
+
+        }
+        header{
+            margin-top: 0%;
+        }
+        img{
+            text-align: center;
+            margin: 0%;
+            margin-left: 0%;
+            margin-right: 0%;
+        }
+        @media 
+        (max-width: 720px) {
+            /* Para telas menores que 768px (ex: tablets e celulares)
+
+            Ajusta o logo para uma largura menor */
+            header .logo img {
+                height: 40px;
+            }
+
+            /* Menu de navegação fica vertical */
+            nav ul.menu {
+                flex-direction: column;
+                margin-top: 20px;
+            }
+
+            nav ul.menu li {
+                margin-bottom: 10px; /* Espaçamento entre os itens */
+            }
+
+            /* Ajustes para o Header */
+            header {
+                height: auto;
+                padding: 30px 0; /* Adiciona um espaçamento em cima e embaixo */
+            }
+
+            /* Ajuste no texto do header se necessário */
+            header h1 {
+                font-size: 28px; /* Reduz o tamanho da fonte do título */
+            }
+
+            /* Imagem de fundo do header não vai mais cobrir 100% */
+            header {
+                background-size: contain; /* Ajusta a imagem para caber dentro do header */
+            }
+        }
+
+        /* Para dispositivos ainda menores, como celulares verticais */
+        @media (max-width: 480px) {
+            header .logo img {
+                height: 35px; /* Logo ainda menor para telas muito pequenas */
+            }
+
+            /* Ajuste da fonte do menu */
+            nav ul.menu li a {
+                font-size: 16px;
+            }
+
+            /* Ajustes adicionais no header para telas bem pequenas */
+            header h1 {
+                font-size: 24px;
+            }
+
+            /* Ajustes na imagem da section */
+            section img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+        
+    </style>
 </head>
 <body>
     <header id="mainHeader">
@@ -21,6 +96,9 @@
             </ul>
         </nav>
     </header>
+    <section>
+        <img src="portfolio.png" alt="">
+    </section>
 
     
 </body>

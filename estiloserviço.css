@@ -307,6 +307,10 @@ button:hover {
     #mainHeader {
         flex-direction: column;
         padding: 15px 0;
+        background: 
+        linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 91, 153, 0) 85%),
+        url("header.png") no-repeat center center;
+        size: 100%
     }
 
     .menu {

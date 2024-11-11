@@ -15,11 +15,16 @@
         </div>
         <nav>
             <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="serviços.html">Serviços</a></li>
-                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="index.html" style="text-align: top;">Home</a></li>
+                <li><a href="serviços.html" >Serviços</a></li>
             </ul>
         </nav>
+        
+        <!-- Novo conteúdo -->
+        <div class="header">
+            <h1 class="fixed-text">COORDENADA É</h1>
+            <span class="typing-text"></span>
+        </div>
     </header>
 
     <section class="texto-section">
@@ -45,11 +50,11 @@
     <section class="cadastro-section">
         <div class="form-container">
             <form id="whatsappForm">
-                <h2>Insira seus dados</h2>
+                <h2 style="color: white;">Insira seus dados</h2>
                 <input type="email" id="email" placeholder="E-mail" required>
                 <input type="tel" id="telefone" placeholder="Telefone ou WhatsApp" required>
                 
-                <label for="servico">Serviço desejado:</label>
+                <label for="servico" style="color: white;">Serviço desejado:</label>
                 <select id="servico" required>
                     <option value="" disabled selected>Selecione um serviço</option>
                     <option value="Tráfego Pago">Tráfego Pago</option>
@@ -60,8 +65,8 @@
                     <option value="Todos os Serviços">Todos os Serviços</option>
                 </select>
     
-                <textarea id="mensagem" placeholder="Descreva brevemente o que espera de uma agência" rows="4" required></textarea>
-                <button type="button" onclick="enviarParaWhatsApp()">Enviar</button>
+                <textarea id="mensagem" placeholder="Descreva informações adicionais ou informe se deseje 2 ou mais serviços" rows="4" required></textarea>
+                <button type="button" onclick="enviarParaWhatsApp()">Contratar</button>
             </form>
         </div>
     </section>
@@ -86,5 +91,6 @@
     window.open(link, '_blank');
 }
     </script>
+    <script src="PORTFOLIO.JS"></script>
 </body>
 </html>

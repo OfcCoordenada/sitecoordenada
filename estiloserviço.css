@@ -8,7 +8,7 @@ body {
 /* Header */
 /* Estilo da header */
 ./* Ajustes gerais para o Header */
-#mainHeader {
+#mainHeader{
     display: flex;
     justify-content: space-between;  /* Logo à esquerda, menu à direita */
     align-items: center;
@@ -351,6 +351,10 @@ button:hover {
 
     .video-section {
         margin: 20px 0;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 10px;
     }
 
     .logo img {

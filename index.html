@@ -1,182 +1,222 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agência de Marketing</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilo1.css">
-    <link rel="shortcut icon" href="logo-preta.jpg" type="image/x-icon">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sua Empresa</title>
+    <link rel="stylesheet" href="output.css">
     <style>
-        /* Adicionei o padding-top para as seções abaixo do header */
-        section {
-            padding-top: 80px; /* Ajuste este valor se necessário para corresponder à altura do seu header */
-        }
+    .loader {
+        border: 6px solid rgba(255, 255, 255, 0.2);
+        border-top: 6px solid #06b6d4; /* cor cyan padrão */
+        border-radius: 50%;
+        width: 120px;   /* maior */
+        height: 120px;  /* maior */
+        animation: spin .5s linear infinite;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      /* Fade out */
+      .fade-out {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
     </style>
-</head>
-<body>
-    <header id="mainHeader">
-        <div class="logo">
-            <img src="logo branca.png" alt="Logo da Agência" style="height: 50px;"> <!-- Insira o caminho da sua imagem aqui -->
-        </div>
-        <nav>
-            <ul class="menu">
-                <li><a href="#mainHeader" class="scroll-to-top">Home</a></li>
-                <li><a href="serviços.html" target="_blank">Serviços</a></li>
-                <li><a href="#diferenciais">Sobre</a></li>
-                <li><a href="#footer">Contato</a></li> <!-- Link direto para o footer -->
-            </ul>
-        </nav>
-    </header>
-    
+  </head>
+  <body class="bg-gray-900 text-white">
 
-<!-- Seção de Serviços -->
-<section id="servicos">
-    <div class="service-container">
-        <div class="service active">
-            <img src="CRIAÇÃO-DE-SITE.jpg" alt="Criação de site profissional">
-            <h3>Criação de site profissional</h3>
-        </div>
-        <div class="service">
-            <img src="editor-de-video.jpg" alt="Edição de vídeo">
-            <h3>Edição de vídeo</h3>
-        </div>
-        <div class="service">
-            <img src="gestao-de-trafego.jpg" alt="Gestão de Tráfego">
-            <h3>Gestão de Tráfego</h3>
-        </div>
-        <div class="service">
-            <img src="identidade-visual.jpg" alt="Crie sua Identidade Visual">
-            <h3>Crie sua Identidade Visual</h3>
-        </div>
-        <div class="service">
-            <img src="videmaker.jpg" alt="Videomaker">
-            <h3>Videomaker</h3>
-        </div>
-        <button id="prevService" class="nav-button left">&#10094;</button>
-        <button id="nextService" class="nav-button right">&#10095;</button>
+    <div id="loading-screen" class="fixed inset-0 flex flex-col items-center justify-center bg-gray-900 z-50">
+      <div class="relative flex items-center justify-center">
+        <div class="loader"></div>
+        <img src="../assets/LOGO.png" alt="Logo" class="absolute w-16 h-16" />
+      </div>
     </div>
-</section>
 
-    
-    <!-- Seção 3 -->
-    <section id="diferenciais">
-        <div class="content-box">
-            <div class="left-column">
-                <img src="logo-vermelha.png" alt="Logo da Agência" class="logovermelha">
+    <!-- Container principal -->
+    <div class="relative min-h-screen">
+      <!-- Background -->
+      <div
+        class="absolute inset-0 bg-cover bg-center "
+        style="background-image: url('../assets/Retângulo-12.png')"
+      >
+        <div class="absolute inset-0 bg-black/60"></div>
+      </div>
+
+      <!-- Navbar -->
+      <nav
+        class="relative z-10 flex items-center justify-between px-8 py-4"
+      >
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <img src="../assets/LOGO.png" alt="Logo" class="h-10 w-auto" />
+          <span class="text-xl font-bold tracking-wide">Coordenada</span>
+        </div>
+
+        <!-- Links -->
+        <ul class="hidden md:flex space-x-8 text-sm font-medium">
+          <li class="hover:text-cyan-400 cursor-pointer">
+            <a href="#inicio">Início</a>
+            </li>
+            <li class="hover:text-cyan-400 cursor-pointer">
+            <a href="#solucoes">Soluções</a>
+            </li>
+            <li class="hover:text-cyan-400 cursor-pointer">
+            <a href="#sobre">Sobre Nós</a>
+            </li>
+            <li class="hover:text-cyan-400 cursor-pointer">
+            <a href="#contato">Contato</a>
+            </li>
+
+        </ul>
+
+        <!-- Botão -->
+        <a href="https://wa.me/5592992894900?text=Ol%C3%A1%20gostaria%20de%20falar%20a%20respeito%20de%20desenvolvimento%20de%20softwares" 
+   target="_blank" ><button
+          class="ml-6 px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-black font-semibold rounded-lg shadow-lg transition"
+        >
+          Fale Conosco
+        </button></a>
+      </nav>
+
+      <!-- Hero -->
+      <header
+        class="relative z-10 flex flex-col items-center justify-center text-center min-h-[80vh] px-6"
+      >
+        <h1
+          class="text-4xl md:text-6xl font-bold max-w-3xl leading-tight"
+        >
+          Tecnologia de Alto Padrão para Escalar o Seu Negócio
+        </h1>
+        <p class="mt-6 max-w-xl text-lg text-gray-200">
+          Soluções inovadoras para empresas que buscam performance, segurança
+          e crescimento exponencial.
+        </p>
+        <div class="mt-8 flex space-x-4">
+            <a href="https://wa.me/5592992894900?text=Ol%C3%A1%20gostaria%20de%20falar%20a%20respeito%20de%20desenvolvimento%20de%20softwares" 
+   target="_blank" >
+                <button
+                class="px-6 py-3 bg-cyan-500 text-black font-semibold rounded-lg shadow-lg hover:bg-cyan-400 transition">
+                Quero Conhecer
+            </a>
+            </button>
+        </a>
+          <button
+            class="px-6 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-black transition"
+          >
+            Saiba Mais
+          </button>
+        </div>
+      </header>
+    </div>
+
+
+    <h1 class="text-3xl text-center justify-center font-bold py-16"> Serviços </h1>
+<!--  Articles para apresentacao de produtos  -->
+    <article class=" relative z-10 px-8 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"> 
+
+        
+    <!-- Produto 1 -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-cyan-500/50 transition">
+            <h2 class="text-xl font-bold mb-2">Desenvolvimento Web</h2>
+            <p class="text-gray-300 mb-4">Seu site ou sistema no ar com qualidade e alto desempenho.</p>
+            <a href="#" class="text-cyan-400 hover:underline">Saiba mais</a>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-cyan-500/50 transition">
+            <h2 class="text-xl font-bold mb-2">SAAS</h2>
+            <p class="text-gray-300 mb-4">Crie seu próprio sistema ou torne-se um revendedor.</p>
+            <a href="#" class="text-cyan-400 hover:underline">Saiba mais</a>
+        </div>
+
+        <!-- Produto 3 - Link para GitHub -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-cyan-500/50 transition">
+            <h2 class="text-xl font-bold mb-2">Banco de Dados</h2>
+            <p class="text-gray-300 mb-4">Sistemas integrados para relatórios em tempo real.</p>
+            <a href="https://github.com/seuusuario" target="_blank" class="text-cyan-400 hover:underline">Saiba mais</a>
+        </div>
+
+        <!-- Produto 4 -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-cyan-500/50 transition">
+            <h2 class="text-xl font-bold mb-2">MarketPlace</h2>
+            <p class="text-gray-300 mb-4">Chega de mensalidade crie sua própria loja e pague apenas uma vez.</p>
+            <a href="#" class="text-cyan-400 hover:underline">Saiba mais</a>
+        </div>
+
+
+    </article>
+
+    <section class="relative z-10 px-8 py-16 bg-white flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+    <!-- Foto -->
+            <div class="flex-shrink-0">
+                <img src="../assets/Gemini_Generated_Image_xeefdhxeefdhxeef.png" alt="Gustavo" class="w-40 h-40 md:w-56 md:h-56 rounded-full object-cover shadow-lg border-4 border-cyan-500">
+                <p class="text-center justify-center items-center text-black">Gustavo Rosas</p>
+                <p class="text-center justify-center text-black">CEO</p>
             </div>
-            <div class="right-column">
-                <h1 class="montserratfont">Sabemos que você procura a melhor agência e <span class="redword"> PARABÉNS VOCÊ ENCONTROU!</span></h1>
-                <p class="grey">A coordenada busca o equilibrio entre todas as partes do todo, marketing digital, tráfego pago, design, tecnologia e mídias sociais. A revolução digital já chegou e você não pode ficar de fora disso por mais tempo, tempo é o recurso mais importante e o conhecimento a ferramenta essencial, juntamos ambos para ter o melhor das conexões com o mundo dos negócios.</p>
-            </div>
+
+    <!-- Texto -->
+         <div id="sobre" class="max-w-xl text-justify">
+            <h2 class="text-3xl md:text-4xl font-bold text-black mb-4">Sobre a Coordenada</h2>
+            <p class="text-gray-800 text-lg md:text-base leading-relaxed">
+            Fundada por Gustavo Rosas em 2022, a Coordenada tem como objetivo melhorar cada aspecto no desenvolvimento de softwares que sejam seguros, rápidos e de fácil entendimento, além de proporcionar uma experiência simples para o usuário. Acreditamos que a tecnologia não tem limites e, a cada dia, surgem novas maneiras de fazer as coisas de forma mais eficiente, apoiadas por pesquisas profundas e atenção às necessidades de cada pessoa.
+            </p>
         </div>
     </section>
 
+    <!-- Última Section com imagem e conteúdo no canto esquerdo -->
+   <!-- Última Section com imagem de largura total e altura natural -->
+<section class="relative w-full">
+  <!-- Imagem de fundo -->
+  <div class="relative h-full bg-cover">
+    <img src="../assets/image (18).png" alt="Imagem de destaque" class="w-full object-cover">
+    <div class="absolute inset-0 bg-black/40"></div> <!-- Overlay -->
+  </div>
+
+  <!-- Conteúdo no canto esquerdo -->
+  <div class="absolute top-1/4 left-8 md:left-16 lg:left-24 z-10 flex flex-col">
+    <h1 class="text-4xl md:text-6xl font-bold text-white mb-3 max-w-lg">
+      Transforme seu negócio com tecnologia de alto padrão
+    </h1>
+    <a href="https://wa.me/5592992894900?text=Ol%C3%A1%20gostaria%20de%20falar%20a%20respeito%20de%20desenvolvimento%20de%20softwares" class="px-10 py-1 mt-2 bg-cyan-500 text-black font-semibold rounded-lg shadow-lg hover:bg-cyan-400 transition w-max">
+      Fale Conosco
+    </a>
+  </div>
+</section>
+
+    <footer class="bg-gray-800 text-gray-300 py-16 ">
+        <div class="container mx-auto px-8 flex flex-col md:flex-row justify-between items-center">
+            <!-- Texto -->
+            <p class="text-sm">&copy; 2025 Coordenada. Todos os direitos reservados.</p>
+
+            <!-- Links sociais -->
+            <div class="flex space-x-4 mt-4 md:mt-0">
+            <a href="#" class="hover:text-cyan-400 transition">Facebook</a>
+            <a href="#" class="hover:text-cyan-400 transition">LinkedIn</a>
+            <a href="#" class="hover:text-cyan-400 transition">Instagram</a>
+            <a href="#" class="hover:text-cyan-400 transition">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
     <script>
-        let lastScrollTop = 0; // Armazena a posição do último scroll
-        const header = document.getElementById('mainHeader'); // Seleciona o header
-
-        window.addEventListener('scroll', function() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Posição atual do scroll
-
-            if (scrollTop > lastScrollTop) {
-                // Rolando para baixo
-                header.style.top = "-80px"; // Esconde o header (ajuste a altura conforme necessário)
-            } else {
-                // Rolando para cima
-                header.style.top = "0"; // Mostra o header
-            }
-            lastScrollTop = scrollTop; // Atualiza a posição do último scroll
-        });
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          const loader = document.getElementById("loading-screen");
+          loader.classList.add("fade-out"); // aplica o fade
+          
+          // depois do fade, esconde de vez e mostra o site
+          setTimeout(() => {
+            loader.style.display = "none";
+            document.getElementById("site-content").classList.remove("hidden");
+          }, 800); // tempo igual ao transition
+        }, 1000); // tempo total do loading
+      });
     </script>
-        <!-- Seção 4 -->
-        <section id="diferenciais">
-            <div class="content-container">
-                <div class="column">
-                    <h2 >Tudo ao seu alcance</h2>
-                    <p class="grey">Não conte com somente um serviço mas com uma equipe que <br>irá definitivamente cuidar de todo o seu marketing desde as artes até gestão comercial</p>
-                </div>
-                <div class="column">
-                    <h2 >Organizaçao é fundamental para o sucesso</h2>
-                    <p class="grey">Sabemos que sua estrutura funciona mas atualizar para oque <br> está mais que validado é mais que necessário na sua produção</p>
-                </div>
-            </div>
-        </section>
 
-        <!-- Seção do Botão de Chamada para Ação -->
-        <section id="cta">
-            <div class="logo1">
-                <img src="logo branca.png" alt="Logo" style="max-width: 100px; margin-bottom: 10px;"> <!-- Logo acima do texto -->
-            </div>
-            <div class="cta-text">
-                <h2>O primeiro passo para o crescimento <br>está a um clique.</h2>
-            </div>
-            <div class="cta-button">
-                <a href="serviços.html"  class="button" target="_blank">Saiba mais</a>
-            </div>
-        </section>
 
-                <!-- Seção 6 -->
-        <section id="empresas" style="background-color: #ffffff; padding: 40px 0;">
-            <h1 class="white">Clientes que já contrataram a <br>
-            Coordenada</h1>
-            <div class="empresas-container">
-                <a href="https://empresa1.com" target="_blank"><img src="casa-da-pizza-icon.png" alt="Empresa 1"></a>
-                <a href="https://empresa2.com" target="_blank"><img src="logo-pl.png" alt="Empresa 2"></a>
-                <a href="https://empresa3.com" target="_blank"><img src="th-camarao.png" alt="Empresa 3"></a>
-                <a href="https://empresa4.com" target="_blank"><img src="brown-art-studio.png" alt="Empresa 4"></a>
-            </div>
-        </section>
 
-        <!-- Seção com Foto e Gradiente -->
-<section id="apresentacao">
-    <div class="foto-apresentacao">
-        <img class="fotoeu" src="png-eu..png" alt="Sua Foto">
-        <div class="gradiente-texto">
-            <h2 class="blackw">A diferença está no processo!</h2>
-            <p class="blackp">Sou Gustavo, desenvolvedor e designer, atualmente estudando Ciência da Computação.  Desde 2022, atuamos no mercado digital com o objetivo de descomplicar a sua jornada de entrada nesse novo mundo. Reconhecemos que o digital pode parecer complexo, mas estamos aqui para simplificar o processo e oferecer suporte eficaz. Valorizamos <br>boas histórias, pois elas são fundamentais para que a sua se destaque. Conte com a Coordenada e vamos construir o seu sucesso juntos."</p>
-        </div>
-    </div>
-</section>
-
-        <!-- Ultima Seção Contrate a Coordenada -->
-<section id="contrate" style="background-image: url('negocios.png'); background-size: cover; background-position: center; padding: 80px 0; color: white;">
-    <div class="content-overlay">
-        <h2>Deixe que a Coordenada te guie no digital</h2> <br><br><br>
-        <p>Seja um revolucionário no digital</p>
-        <a href="serviços.html" class="botao-cta">Contratar agora</a>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer id="footer">
-    <div class="footer-container">
-        <!-- Coluna 1: Logo e Redes Sociais -->
-        <div class="footer-coluna">
-            <img src="logo-vermelha.png" alt="Logo" class="footer-logo">
-            <div class="redes-sociais">
-                <a href="https://www.facebook.com/seuperfil" target="_blank">Facebook</a>
-                <a href="https://www.instagram.com/seuperfil" target="_blank">Instagram</a>
-                <a href="https://www.linkedin.com/in/seuperfil" target="_blank">Youtube</a>
-            </div>
-        </div>
-
-        <!-- Coluna 2: Endereço e Contato -->
-        <div class="footer-coluna">
-            <p><strong>Endereço:</strong><br> Rua Guianesia ,131 <br> Manaus - Amazonas</p>
-            <p><strong>Email:</strong><br> ofccoodenada@gmail.com</p>
-            <p><strong>fone:</strong><br> (92) 99289 4900</p>
-        </div>
-
-        <!-- Coluna 3: Desenvolvedor -->
-        <div class="footer-coluna">
-            <p> &#169 Todos os direitos reservados</p>
-            <p>Desenvolvido por Coordenada Tecnologia</p>
-        </div>
-    </div>
-</footer>
-
-    <!-- Conteúdo da página -->
-    <script src="animação.js"></script>
-</body>
+  </body>
 </html>
